@@ -107,8 +107,8 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicingelit. Provident voluptatibus quam fuga laborumalias veniam libero autem quasi maxime ullam vero nama imi dolor, architecto ab facilis eaque deserunt nobise voluptatibus quam</p>
         </div>
     </section>
-    <div id="block_area" style="height: 70px; width: 450px; background-color: tomato;float:left">
-        <h1 id="firstclass"style="text-align: center;margin-top: 25px;">Please buy a ticket</h1>
+    <div class="shadow" id="block_area" style="height: 150px; width: 450px; background-color:chartreuse; margin-bottom: 40px;border-radius: 10px;">
+        <h1 id="firstclass"style="text-align: center;margin-top: 52px;">Please, buy a ticket !!</h1>
     </div>
 
     <!--Thank You-->
@@ -145,10 +145,18 @@
 
             const total = Subtotal + vat;
             document.getElementById("total_count").innerText = total;
-            document.getElementById("firstclass").innerText ='Congratulations!!';
+
+            //This code book now btn
+            if(Subtotal == 0){
+                document.getElementById("firstclass").innerText ='Please, buy a ticket !!';
+            }
+            else{
+                document.getElementById("firstclass").innerText ='Congratulations!!';
+            }
         }
         document.getElementById("bookNowBtn").addEventListener('click', function () {
             document.getElementById("block_area").style.display= 'block';
+            
         })
 
         
